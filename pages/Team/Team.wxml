@@ -1,0 +1,16 @@
+<!-- <view class="outer fon-30">
+{{num}}位团对人员，总贡献收益<text class="colorred">￥{{all}}</text>
+</view> -->
+
+<view class="content borderBtn  bg-fff">
+  <view wx:for="{{list}}" bindtap="lianjie" data-index="{{item.index}}" class="abb fon-30 borderTop  flex">
+    <view class="flex left">
+      <image class="images" src="{{item.headimgurl}}"></image>
+        {{item.NickName}}
+    </view>
+    <!-- <view class="classname">
+      贡献收益￥{{item.YongJin}}
+    </view> -->
+  </view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>您暂时还没有队员</view>

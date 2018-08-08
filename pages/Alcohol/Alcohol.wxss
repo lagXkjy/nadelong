@@ -1,0 +1,78 @@
+/* Alcohol.wxss */
+page{
+  background-color: #fff;
+}
+.buton{
+   justify-content:center;
+  -webkit-justify-content:center;
+  height: 57rpx;
+  line-height: 57rpx;
+  margin: 27rpx 0;
+}
+.button-two{
+  background-color: #7d0005;
+  width: 121rpx;
+  border-radius:0 30rpx 30rpx  0; 
+  text-align: center;
+}
+.button-one{
+  width: 121rpx;
+ 
+   border-radius: 30rpx 0 0 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+  border:1px solid #7d0005;
+  color:#7d0005;
+}
+.outer{
+  padding: 0 25rpx;
+  margin-bottom: 20rpx;
+}
+.outer-content{
+  border:1px solid #e0e0e0;
+  padding: 30rpx 20rpx;
+}
+.img{
+  height:330rpx;
+  width: 284rpx;
+  margin-right: 40rpx;
+}
+.price{
+  margin-top:24rpx;
+  margin-bottom: 20rpx;
+}
+.huise{
+  color:#6a6a6a;
+  margin-bottom: 5rpx;
+}
+
+.s-all-footer{
+  height: 100rpx;
+  background-color: #f7f7fa;
+  justify-content:center;
+  align-items: center;
+
+  -webkit-justify-content:center;
+  -webkit-align-items: center;
+  color:#99999b;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.s-top-footer{
+  width: 25%;
+  font-size: 26rpx;
+  text-align: center;
+}
+.s-image{
+  width: 50rpx;
+  margin-bottom: 5rpx;
+}
+.scroll{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:100rpx;
+}

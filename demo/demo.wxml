@@ -1,0 +1,7 @@
+<view >  
+  <view >  
+    <canvas  canvas-id="canvasArc">  
+    </canvas>  
+    
+  </view>  
+</view>  

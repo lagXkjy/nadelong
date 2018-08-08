@@ -1,0 +1,63 @@
+/* address.wxss */
+
+.outer-top{
+  padding:35rpx;
+  border-bottom:1px solid #e3e3e3;
+}
+.name{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.address{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+    word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.outer-footer{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom:1px solid #e3e3e3;
+}
+.xuan{
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  border:1px solid #ccc;
+  box-sizing: border-box;
+  margin-right: 16rpx;
+}
+.xuanimg{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 16rpx;
+}
+.outer-footer{
+  padding: 0 35rpx;
+  font-size:26rpx;
+  color:#5a5a5a;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  margin-bottom:20rpx;
+}
+.footer-top{
+align-items: center;
+-webkit-align-items: center;
+}
+.image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.footer-right .flex{
+  align-items: center;
+  -webkit-align-items: center;
+  margin-left: 30rpx;
+}
+.button{
+  width: 90%;
+  margin: 40rpx auto;
+}

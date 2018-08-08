@@ -1,0 +1,31 @@
+
+.padding-l-18{
+  padding-left: 18rpx;
+}
+.Height-t{
+  height: 60rpx;
+}
+.bg-outer{
+   flex-wrap:wrap;
+   justify-content: space-between;
+   padding: 0 20rpx;
+}
+.outer-content{
+   width: 343rpx;
+  margin-bottom: 20rpx;
+  border:1px solid #ccc;
+}
+.img{
+  height: 346rpx;
+  width: 340rpx;
+  margin-bottom: 10rpx;
+}
+.price{
+  margin-bottom: 20rpx;
+}
+.huise{
+  color:#6a6a6a;
+  margin-bottom: 5rpx;
+}
+
+

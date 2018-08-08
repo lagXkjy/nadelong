@@ -1,0 +1,42 @@
+<!--share.wxml-->
+<view class="content borderBtn  bg-fff">
+  <view  class="abb fon-30 borderTop  flex">
+    <view class="flex left">
+      <image class="images" src="{{headimgurl}}"></image>
+        {{Name}}
+    </view>
+    <view class="classname">
+      贡献收益￥{{all}}
+    </view>
+  </view>
+</view>
+
+<view class="content" wx:for="{{list}}">
+  <view class="time ababab fon-26 borderTop borderBtn">
+    {{item.time}}
+  </view>
+  <view class="commodity  bg-fff ">
+    <view class="commodity-top  flex">
+    <view class="position fon-26 ababab">x{{item.Quantity}}</view>
+      <view class="commodity-img">
+        <image mode="widthFix" class="all-img" src="{{url}}{{item.url}}"></image>
+      </view>
+      <view class="commodity-title">
+        <view class="fon-30 title xianzhi">
+         {{item.title}}
+        </view>
+        <view class="colorred fon-36">
+          €{{item.SalePrice}}
+        </view>
+      </view>
+    </view>
+    <view class="commodity-middle fon-26 flex borderTop">
+      <view class="classname">
+        实付款：￥{{item.ActualPrice}}
+      </view>
+      <view class="classname">
+      获得收益：￥{{item.YongJin}}
+      </view>
+    </view>
+    </view>
+</view>

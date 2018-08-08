@@ -1,0 +1,320 @@
+<!--Order.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="navbar speals">  
+  <text  wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>
+
+<!--全部  -->
+<view class='outeraa' hidden="{{currentTab!==0}}">
+
+    <view wx:for="{{List}}" class="outer bg-fff">
+  <!--  -->
+  
+  <!--  -->
+    <view wx:if="{{item.StatusCode==1003}}" class="outer-top borderTop  colorred">
+      已完成
+    </view>
+     <view wx:if="{{item.StatusCode==1001}}" class="outer-top borderTop  colorred">
+      待支付
+    </view>
+     <view  wx:if="{{item.StatusCode==1002}}" class="outer-top borderTop  colorred">
+      待收货
+    </view>
+    <view  wx:if="{{item.StatusCode==1004}}" class="outer-top borderTop  colorred">
+      已评价
+    </view>
+    <!--  -->
+    <view  wx:if="{{item.StatusCode==1001}}">
+        <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GOSHangPinX' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+       <view  wx:if="{{item.StatusCode==1002}}">
+            <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GOSHangPinX' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    </view>
+
+     <view  wx:if="{{item.StatusCode==1003}}">
+            <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GoDdetil' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    </view>
+    <!--  -->
+   <view  wx:if="{{item.StatusCode==1004}}">
+         <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GoDdetil' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    </view>
+    <!--  -->
+
+    <view class="footer">
+
+         <view wx:if="{{item.StatusCode==1001}}">
+         
+               <view class=" borderTop footer-top">
+                  待付款:¥{{item.ActualPrice}}
+                  </view>
+                  <view class="borderTop  footer-bottom">
+                  <view data-index="{{item.Index}}" bindtap='QuZhiFu' class="Red-wine  zhifuqu fff">去支付 </view>
+              </view>
+         </view>
+
+         <view wx:if="{{item.StatusCode==1002}}">
+               <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+                <view class="borderTop  footer-bottom">
+                <view bindtap='Logisticsview' data-index="{{item.Index}}" class="colorred redborder  zhifuqu">查看物流</view>
+                <view bindtap='theGoods' data-index="{{item.Index}}" class="Red-wine  zhifuqu fff">确认收货</view>
+                </view>
+         </view>
+
+         <view wx:if="{{item.StatusCode==1003}}">
+               <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+                  <view class="borderTop  footer-bottom">
+                  <view data-index="{{item.Index}}" bindtap="pingjia" class="colorred redborder  zhifuqu">
+                  去评价</view>
+                  <view data-index="{{item.Index}}" bindtap='QuZhiFuZ' class="Red-wine  zhifuqu fff">再次购买</view>
+                  </view>
+         </view>
+
+   <view wx:if="{{item.StatusCode==1004}}">
+               <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+                  <view class="borderTop  footer-bottom">
+                  <view data-index="{{item.CommodityId}}" bindtap="pingjia" class="colorred redborder  zhifuqu">
+                  已评价</view>
+                  <view data-index="{{item.Index}}" bindtap='QuZhiFuZ' class="Red-wine  zhifuqu fff">再次购买</view>
+                  </view>
+         </view>
+
+    </view>
+  </view>
+
+</view>
+<!--待支付  -->
+<view class='outeraa' hidden="{{currentTab!==1}}">
+
+  <view wx:for="{{List}}" class="outer bg-fff">
+  <!--  -->
+
+  <!--  -->
+    <view class="outer-top borderTop  colorred">
+      待支付
+    </view>
+    <!--  -->
+      <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GOSHangPinX' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    <!--  -->
+    <view class="footer">
+      <view class=" borderTop footer-top">待付款:¥{{item.ActualPrice}}</view>
+      <view class="borderTop  footer-bottom"><view data-index="{{item.Index}}" bindtap='QuZhiFu' class="Red-wine  zhifuqu fff">去支付          </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<!--待收货  -->
+<view class='outeraa' hidden="{{currentTab!==2}}">
+
+  <view  wx:for="{{List}}" wx:if="{{item.StatusCode==1002}}" class="outer bg-fff">
+  <!--  -->
+
+  <!--  -->
+    <view class="outer-top borderTop  colorred">
+      待收货
+    </view>
+    <!--  -->
+       <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GoDdetil' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+          x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    <!--  -->
+    <view class="footer">
+      <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+      <view class="borderTop  footer-bottom">
+      <view bindtap='Logisticsview' data-index="{{item.Index}}" class="colorred redborder  zhifuqu">查看物流</view>
+      <view  bindtap='theGoods' data-index="{{item.Index}}" class="Red-wine  zhifuqu fff">确认收货</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<!--已完成  -->
+<view class='outeraa' hidden="{{currentTab!==3}}">
+
+  <view  wx:for="{{List}}" class="outer bg-fff">
+  <!--  -->
+
+  <view wx:if="{{item.StatusCode==1003}}">
+  
+  <!--  -->
+    <view class="outer-top borderTop  colorred">
+      已完成
+    </view>
+    <!--  -->
+     <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GoDdetil' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+           <view class="num ababab">
+              x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    <!--  -->
+    <view class="footer">
+      <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+      <view class="borderTop  footer-bottom">
+      <view data-index="{{item.Index}}" bindtap="pingjia" class="colorred redborder  zhifuqu">去评价</view>
+      <view data-index="{{item.Index}}" bindtap='QuZhiFuZ' class="Red-wine  zhifuqu fff">再次购买</view>
+      </view>
+    </view>
+  </view>
+
+    <view wx:if="{{item.StatusCode==1004}}">
+ 
+  <!--  -->
+    <view class="outer-top borderTop  colorred">
+      已评价
+    </view>
+    <!--  -->
+     <view   wx:for="{{item.Commlist}}"   wx:for-item="j"   >
+        <view  bindtap='GoDdetil' data-index="{{item.Index}}" data-id='{{index}}'  class="middle borderTop  flex">
+ <view class="num ababab">
+              x{{j.Quantity}}
+          </view>
+          <view class="middle-left">
+            <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+          </view>
+          <view class="middle-right">
+            <view class="xianzhi middle-right-title">
+              {{j.CommodityName}}
+            </view>
+            <view class="colorred price">
+            ￥{{j.SalePrice}}
+            <!-- <text class='YuanJiaA'>原价￥{{j.HighPraise}}</text> -->
+            </view>
+          </view>
+        </view>
+    </view>
+    <!--  -->
+    <view class="footer">
+      <view class=" borderTop footer-top">实付款:¥{{item.ActualPrice}}</view>
+      <view class="borderTop  footer-bottom">
+      <view  class="colorred redborder  zhifuqu">已评价</view>
+      <view data-index="{{item.Index}}" bindtap='QuZhiFuZ' class="Red-wine  zhifuqu fff">再次购买</view>
+      </view>
+    </view>
+  </view>
+
+
+  </view>
+
+</view>
+<view  class='noMore a6a6a6' hidden='{{noMore}}'>没有更多了</view>
+<view  class='noMore speAA a6a6a6' hidden='{{noMoreA}}'>您暂时还没有{{LeiXIng}}批发单</view>

@@ -1,0 +1,60 @@
+<!--Winery.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="outer">
+<!-- <view class="buton fon-26 flex">
+  <view class="button-one  fff">系列</view>
+  <view bindtap="Alcohol" class="button-two bg-fff">酒品</view>
+</view> -->
+ <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}">
+  <block  wx:for="{{listq}}" >
+    <swiper-item>
+      <image src="{{allurl}}{{item.Images}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+ 
+</view>
+<view class="wenti">{{arry.SeriesName}}</view>
+<view class="country fon-30 borderBtn">{{arry.Slogan}}</view>
+
+<view class="middle">
+
+  <view class="fon-30 jieshao">
+    系列介绍
+  </view>
+  
+   <view class="outer-top ">
+    <video wx:if="{{arry.video!=null}}" poster="{{allurl}}{{arry.ImagesSP}}" src="{{allurl}}{{arry.video}}" ></video>
+  </view>
+  <view class="fon-26 {{moree}} middle-last">
+  {{arry.Introduction}}
+  </view>
+ 
+<view bindtap="genduo" class="fon-30 borderBtn more">
+  <view wx:if="{{moreDuo}}">阅读更多</view> 
+  <view wx:else>收起更多</view> 
+</view>
+
+</view>
+
+<view class='flex bg-outer'>
+<view wx:for="{{listL}}">
+  <view data-id='{{index}}' bindtap='LinkTo' class="outer-content">
+    <view class="border-b-1">
+      <image class="img"  src="{{Allurl}}{{item.ListImg}}"></image>
+    </view>
+      <view class="padding-l-18">
+        <view class="fon-30 Height-t xianzhi">
+          {{item.CommodityTitle}}
+        </view>
+        <view class="font-36 price colorred">
+          ¥{{item.Price}}
+          <!-- <text class='YuanJiaA'>原价￥{{item.HighPraise}}</text> -->
+        </view>
+      </view>
+  </view>
+</view>
+</view>
+
+<view class='noMore' hidden='{{noMore}}'>没有更多了</view>
+<view class='noMore' hidden='{{noMore1}}'>暂时还没有数据</view>

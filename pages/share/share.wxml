@@ -1,0 +1,35 @@
+<!--share.wxml-->
+<view class="outer fon-30">
+总成交{{num}}笔，总收益<text class="colorred">￥{{all}}</text>
+</view>
+
+<view class="content" wx:for="{{list}}">
+  <view class="time ababab fon-26 borderTop borderBtn">
+    {{item.time}}
+  </view>
+  <view class="commodity  bg-fff ">
+    <view class="commodity-top  flex">
+    <view class="position fon-26 ababab">x{{item.Quantity}}</view>
+      <view class="commodity-img">
+        <image mode="widthFix" class="all-img" src="{{Allurl}}{{item.url}}"></image>
+      </view>
+      <view class="commodity-title">
+        <view class="fon-30 title xianzhi">
+         {{item.title}}
+        </view>
+        <view class="colorred fon-36">
+          €{{item.SalePrice}}
+        </view>
+      </view>
+    </view>
+    <view class="commodity-middle fon-26 flex borderTop">
+      <view class="classname">
+        实付款：￥{{item.ActualPrice}}
+      </view>
+      <view class="classname">
+      获得收益：￥{{item.YongJin}}
+      </view>
+    </view>
+    </view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>您暂时还没有分销收益</view>

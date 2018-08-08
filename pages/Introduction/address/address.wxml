@@ -1,0 +1,36 @@
+<!--address.wxml-->
+<view wx:for="{{list}}" class="outer bg-fff">
+<!--  -->
+<view class="outer-top">
+  <view class="name">
+    {{item.name}}
+  </view>
+  <view class="address">
+    <view focus="{{false}}" value="" data-index="{{item.index}}" bindblur="bindblur" disabled="false" >
+    {{item.address}}
+    </view>
+  </view>
+</view>
+<!--  -->
+<view class="outer-footer flex">
+  <view bindtap="bindCheckbox"  data-index="{{item.index}}" class="flex footer-top">
+   <view wx:if="{{item.select}}"   class="xuan"></view>
+    <image wx:else  bindtap="bindCheckbox"  data-index="{{item.index}}" class="xuanimg" src="../../../images/icon_03.png"></image>
+    默认地址
+  </view>
+  <view class="footer-right flex">
+      <view  data-index="{{item.index}}" bindtap="editall" class="flex">
+        <image mode="widthFix" class="image"  src="../../../images/edit_03.png"></image>
+          编辑
+      </view>
+      <view class="flex" bindtap='delAddress' data-index="{{item.index}}">
+        <image mode="widthFix" class="image" src="../../../images/remove_05.png"></image>
+          删除
+      </view>
+  </view>
+</view>
+</view>
+
+<view bindtap="navtoNew" class="button">
+  <button class="fff Red-wine">新增地址</button>
+</view>

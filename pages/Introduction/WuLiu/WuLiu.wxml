@@ -1,0 +1,19 @@
+<view  class='outer'>
+  <view class='outer-top'>
+    <text class='huise'>订单编号：</text>{{list.order}}
+  </view>
+  <view class='outer-top'>
+     <text class='huise'>配送方式：</text>{{list.name}}
+  </view>
+</view>
+
+<!--  -->
+<view class='bttom bg-fff'>
+  <view  class='flex bottom-content' wx:for="{{list.data}}">
+  <view class='dian'></view>
+    <view class='xiana hongse'>
+      <view>{{item.content}}</view>
+      <view class='huise'>{{item.time}}</view>
+    </view>
+  </view>
+</view>

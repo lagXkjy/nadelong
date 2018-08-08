@@ -1,0 +1,7 @@
+<!--kong.wxml-->
+<view class="outer">
+  <image class="img" mode="widthFix" src="../../images/gouwchek_03.png"></image>
+  <view class="fon-30">
+    购物车是空的，<text class="guang">我要逛逛</text>
+</view>
+</view>

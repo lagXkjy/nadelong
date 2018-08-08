@@ -1,0 +1,25 @@
+/* Team.wxss */
+.outer{
+  height: 121rpx;
+  line-height: 121rpx;
+  color:#787878;
+  padding: 0 48rpx;
+}
+.images{
+  height: 78rpx;
+  width: 78rpx;
+  margin-right: 27rpx;
+}
+.abb{
+    justify-content:space-between;
+     -webkit-justify-content:space-between;
+    padding:0rpx 29rpx;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.left{
+   align-items: center;
+   -webkit-align-items: center;
+}

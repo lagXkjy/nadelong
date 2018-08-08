@@ -1,0 +1,136 @@
+<!--commodity.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<swiper indicator-dots="{{true}}" indicator-active-color="#fff"  class="swiper" 
+  autoplay="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{Allurl}}{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="outer">
+  <view class="fon-40">
+    {{AllList.CommodityTitle}}
+  </view>
+  <view class="price colorred borderBtn">
+    {{AllList.MoneyType==1?OU:UA}}{{Price}}
+    <!-- <text class='YuanJiaA'>原价￥{{HighPraise}}</text> -->
+  </view>
+  <!--购买数量  -->
+  <view class='flex GouMaiShu'>
+    <view>购买数量</view>
+    <view class='flex ShuBtn'>
+       <view bindtap='Jian'>-</view>
+      <view>{{Snum}}</view>
+      <view bindtap='Jia'>+</view>
+    </view>
+  </view>
+  <!--结束  -->
+  <view class="detail borderBtn fon-30">
+    <view class="spealB">酒庄名称：{{AllList.ChateauName}}</view>
+    <view class="spealB">酒瓶品牌：{{AllList.BrandName}}</view>
+    <view class="classname">葡萄酒类型：{{AllList.CategoryName}}</view>
+    <view class="classname">原产国：{{AllList.CountryName}}</view>
+    <view class="classname">产区：{{AllList.City}}</view>
+    <view class="classname">年份：{{AllList.Year}}</view>
+    <view class="classname">酒精度：{{AllList.WineScale}}%</view>
+    <view class="classname">级别：{{AllList.Grade}}</view>
+    <view class="classname">规格：{{AllList.BottonSize}}ml</view>
+    <view class="classname">葡萄品种：{{AllList.grapeName}}</view>
+    <view class="classname">保质期：{{AllList.IsUseTime}}年</view>
+    <view class="classname">保存温度：{{AllList.SafeTempreture}}℃以下</view>
+    <view class="classname">配餐建议：</view>
+    <image bindtap='YuLan' mode="widthFix" class="detail-img" src="{{Allurl}}{{Idea}}"></image>
+  </view>
+  
+  <view style='display:none' class="all-view borderBtn">
+      <view class="fon-30 all-top">
+        酒品单据
+      </view>
+    
+      <image bindtap='YuLan1' class="all-img" mode="widthFix"  src="{{Allurl}}{{billsFile}}"></image>
+  </view>
+
+   <view class="all-view borderBtn">
+      <view class="fon-30 all-top">
+        海关报关单
+      </view>
+    
+      <image bindtap='YuLan2' class="all-img" mode="widthFix"  src="{{Allurl}}{{CustomsFile}}"></image>
+  </view>
+
+   <view class="all-view borderBtn">
+      <view class="fon-30 all-top">
+        检验检疫证明
+      </view>
+    
+      <image bindtap='YuLan3' class="all-img" mode="widthFix"  src="{{Allurl}}{{CheckFile}}"></image>
+  </view>
+<view wx:if="{{Contnet}}" class="pinglunL pinglun">期待您的评价</view>
+  <view wx:else class="margin-btn">
+      <view class="pinglun">评论</view>
+        <view wx:for="{{listP}}"  class="pinlunxunhuan">
+          <view class="flex soa-p">
+           <image   class="userinfo-avatar" src="{{item.headimgurl}}" background-size="cover"></image>
+          <view class="classname">
+              <view class="name-p fon-32">{{item.NickName}}</view>
+              <view class="fon-24 a6a6a6">{{item.CreateTime}}</view>
+          </view>
+          </view>
+          <view class="pi-p  fon-32">
+            {{item.Commont}}
+          </view>
+           <view class='borderBtn imgAll'>
+          <image wx:if="{{j!=''}}" bindtap='ShowImage' data-id='{{index}}' data-index='{{item.index}}'  mode='widthFix' wx:for="{{item.Photes}}"  wx:for-item="j" src="{{interfacedomain}}{{j}}"></image>
+          </view>
+        </view>
+<!--  -->
+        <view class="{{Show}}">
+         <view wx:for="{{listT}}" class="pinlunxunhuan">
+          <view class="flex soa-p">
+           <image  class="userinfo-avatar" src="{{item.headimgurl}}" background-size="cover"></image>
+          <view class="classname">
+              <view class="name-p fon-32">{{item.NickName}}</view>
+              <view class="fon-24 a6a6a6">{{item.CreateTime}}</view>
+          </view>
+          </view>
+          <view class="pi-p  fon-32">
+            {{item.Commont}}
+          </view>
+          <view class='borderBtn imgAll'>
+          <image wx:if="{{j!=''}}" bindtap='ShowImage2' data-id='{{index}}' data-index='{{item.index}}' mode='widthFix' wx:for="{{item.Photes}}"  wx:for-item="j" src="{{interfacedomain}}{{j}}"></image>
+          </view>
+        </view>
+        </view>
+ <!--  -->
+        <view bindtap='ISshow' hidden='{{showMoRen}}'  class="fon-32 app-pi">
+            <view hidden='{{Isho}}'>阅读余下{{allLen}}条评价</view>
+            <view hidden='{{!Isho}}'>已展开全部</view>
+        </view>
+        <view hidden='{{!showMoRen}}'  class="fon-32 app-pi">
+            已经是全部了
+        </view>
+  </view>
+
+  <view class="flex borderTop l-lst">
+  <view bindtap='IndexYe' class="one-l">
+    <image class="l-img" mode="widthFix" src="../../images/index_05.png"></image>
+    <view class="fon-24">首页</view>
+  </view>
+  <view bindtap='IsShou' class="one-l">
+   <image wx:if="{{!IsCollect}}" class="l-img" mode="widthFix"  src="../../images/shouchang_07.png"></image>
+   <image wx:else class="l-img" mode="widthFix"  src="../../images/Alery_03.png"></image>
+    <view class="fon-24">收藏</view>
+    
+  </view>
+  <view  bindtap='GoCars' class="one-l diwei">
+  <image class="l-img" mode="widthFix"  src="../../images/shopping_08.png"></image>
+    <view  class="fon-24">批发车</view>
+    <view class="yuan fff fon-24">{{cars}}</view>
+  </view>
+  <view bindtap='addCart' class="fff one-q-hui  one-q">加入批发车</view>
+  <view bindtap="shopping" class="fff one-q Red-wine">购买</view>
+</view>
+</view>
+

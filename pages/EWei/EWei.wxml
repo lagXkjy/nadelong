@@ -1,0 +1,10 @@
+<!--distribution/EWei/EWei.wxml-->
+<view class='outer'>
+  <view>
+    <image bindtap='Fangda' class='imgs' mode='widthFix' src='{{userimg}}'></image>
+  </view>
+  <view class='title'>点击二维码长按保存分享</view>
+</view>
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>

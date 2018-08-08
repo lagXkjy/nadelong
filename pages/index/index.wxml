@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+ <view hidden="{{specal}}" class="top Red-wine fff">
+  <view class="top-all">
+    <view bindtap='SearchMoHu' class="top-left">
+      <image mode="widthFix" class="search" src="../../images/search_03.png"></image>
+    </view>
+    <input bindtap='focus' value="" bindfocus="QingKong"  placeholder="搜索酒庄" placeholder-class="zhanwei"  class="top-right" />
+  </view>
+</view> 
+
+<view hidden="{{speacla}}" class="show Red-wine fff">
+  <view class="show-top">
+   <view bindtap="xiaoshi" class="kuang">
+    <image mode="widthFix"  class="img1" src="../../images/top_03.png"></image>
+    </view>
+    <view bindtap='clearall' class="qingchu">清除全部</view>
+  </view>
+  <view bindtap='guoBie' class="qinhong">
+  <view class="kuang">
+    <image mode="widthFix" class="img-all" src="../../images/guo_07.png"></image>
+    </view>
+     <view><picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      国别  {{array[index]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+    <view class="kuang">
+    <image mode="widthFix" class="img-all jiuzhonga" src="../../images/jiuzhong_11.png"></image>
+     </view>
+     <view><picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+    <view class="picker">
+      酒种  {{array1[index1]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+   <view class="kuang">
+    <image  mode="widthFix" class="img-all jiage" src="../../images/qian_14.png"></image>
+     </view>
+     <view><picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+    <view class="picker">
+      价格  {{array2[index2]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+   <view class="kuang">
+    <image mode="widthFix" class="img-all" src="../../images/zuanshi_17.png"></image>
+    </view>
+     <view><picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+    <view class="picker">
+      品牌  {{array3[index3]}}
+    </view>
+  </picker></view>
+  </view>
+</view>
+
+<swiper indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}"   class="{{swiper}}" autoplay="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image  src="{{allurl}}{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="middle">
+  <view wx:for="{{list}}">
+    <view bindtap="Jump" data-index="{{item.ChateauID}}" class="middle-top">
+      <image class="middle-top-img" src="{{allurl}}{{item.Images}}"></image>
+      <view  class="middle-top-ve">{{item.ChateauName}}</view>
+      <view class='huiseaO'>{{item.Slogan}}</view>
+    </view>
+    <view bindtap="JumpShop" data-index="{{item.CommodityId}}" class="middle-footer">
+      <view class="footer-top">
+        <image class="middle-footer-img" src="{{allurl}}{{item.ListImg}}"></image>
+        </view>
+      <view class="footer-right">
+        <view class="title xianzhi">{{item.CommodityTitle}}</view>
+        <view class="price Red">¥{{item.Price}}
+        <!-- <text class='YuanJiaA'>原价￥{{item.HighPraise}}</text> -->
+        </view>
+        <view class="dusu">酒精度：{{item.WineScale}}</view>
+        <view class="detial">年份：{{item.Year}}</view>
+        <view class="detial">产区：{{item.CountryName}}</view>
+        <view class="detial">葡萄酒种：{{item.CategoryName}}</view>
+        <view class="detial">月销量：{{item.Sails}}</view>
+      </view>
+    </view>
+</view>
+  <view hidden='{{true}}' bindtap='focus' class="condition">
+    筛选条件
+    <image src="../../images/shaixuan_10.png"></image>
+  </view>
+</view>
+
+<view  class='anwushuju' hidden='{{show}}'>
+  暂时没有商品
+</view>
+<view class='noMore' hidden='{{noMore}}'>没有更多了</view>

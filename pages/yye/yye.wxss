@@ -1,0 +1,102 @@
+/* Team.wxss */
+
+.outer {
+  height: 121rpx;
+  line-height: 121rpx;
+  color: #787878;
+  padding: 0 48rpx;
+}
+
+.padding1 {
+  padding-top: 0.8rem;
+  border-bottom:0px solid #e0e0e0;
+}
+
+.section {
+  /* background:#ccc; */
+  margin: 20rpx;
+  padding: 20rpx;
+  margin-top: -10px;
+  font-size: 18px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.plef {
+  width: 10%;
+  margin-left: 2rem;
+  text-align: center;
+  /* padding: 2rem; */
+  background: #9a0101;
+}
+
+.images {
+  height: 78rpx;
+  width: 78rpx;
+  margin-right: 27rpx;
+}
+
+.abb {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  padding: 0rpx 29rpx;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.left {
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.con {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.con-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rpx;
+}
+
+.con-left {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con-g {
+  margin: 0 6rpx;
+}
+
+.con-left-pricker {
+  height: 100%;
+  box-sizing: border-box;
+  width: 250rpx;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #818181;
+}
+
+.con-right {
+  height: 100%;
+  box-sizing: border-box;
+  background: #9a0101;
+  display: flex;
+  align-items: center;
+  padding: 0 50rpx;
+  color: #fff;
+  font-size: 24rpx;
+}

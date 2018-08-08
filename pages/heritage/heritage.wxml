@@ -1,0 +1,19 @@
+<!--heritage.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="outer">
+<view class="title">
+  {{list.ActivityName}}
+</view>
+<view class="fon-30 ababab">
+  {{date}}
+</view>
+
+<view class="classname">
+  <image mode="widthFix" class="img" src="{{Allurl}}{{list.Images}}"></image>
+</view>
+
+<view class="neirong fon-32">
+  {{list.ActivityDetails}}
+</view>
+
+</view>

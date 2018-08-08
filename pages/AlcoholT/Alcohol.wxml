@@ -1,0 +1,24 @@
+<!--Alcohol.wxml-->
+
+
+<view class='flex bg-outer'>
+<view wx:for="{{list}}">
+  <view data-id='{{index}}' bindtap='LinkTo' class="outer-content">
+    <view class="classname">
+      <image class="img"  src="{{Allurl}}{{item.ListImg}}"></image>
+    </view>
+      <view class="padding-l-18">
+        <view class="fon-30 Height-t xianzhi">
+          {{item.CommodityTitle}}
+        </view>
+        <view class="font-36 price colorred">
+          ¥{{item.Price}}
+          <!-- <text class='YuanJiaA'>原价￥{{item.HighPraise}}</text> -->
+        </view>
+      </view>
+  </view>
+</view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>没有更多了</view>
+<view class='noMore' hidden='{{noMore1}}'>暂时还没有数据</view>
+<loading hidden="{{hiddenLoading}}">正在加载</loading>

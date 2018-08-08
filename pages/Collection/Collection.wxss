@@ -1,0 +1,61 @@
+/* Collection.wxss */
+.outer{
+  padding: 20rpx 0; 
+  border-bottom:1px solid #e3e3e3;
+}
+.outer1{
+  padding-bottom: 100rpx;
+}
+page{
+  height: 100%
+}
+.xuan{
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  border:1px solid #ccc;
+  box-sizing: border-box;
+}
+.xuanimg{
+  height: 40rpx;
+  width: 40rpx;
+}
+.outer-left{
+  width: 93rpx;
+}
+.outer-middle image{
+  width: 200rpx;
+  margin-right: 35rpx;
+}
+.title{
+  font-size: 30rpx;
+  padding-right: 50rpx;
+  line-height: 40rpx;
+  padding-top:10rpx;
+}
+.price{
+  font-size: 36rpx;
+  margin-top: 50rpx;
+}
+.footer{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom:0;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+}
+.quanxuan{
+  font-size: 24rpx;
+}
+.shoucnag{
+  font-size: 36rpx;
+  text-align: center;
+  width: 236rpx;
+}
+
+.noMore {
+  margin-top: 100rpx;
+}

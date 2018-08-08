@@ -1,0 +1,37 @@
+<view class="outer fon-30">
+  {{num}}位消费者，总营业额
+  <text class="colorred">￥{{all}}</text>
+</view>
+<view class='con'>
+  <view class='con-content'>
+    <view class='con-left'>
+      <picker class='con-left-pricker' mode="date" value="{{dates}}" start="1978-01-01" end="" bindchange="bindDateChange">
+        <view class="picker">
+          {{dates}}
+        </view>
+      </picker>
+      <view class='con-g'>-</view>
+      <picker class='con-left-pricker' mode="date" value="{{dates1}}" start="1978-01-01" end="" bindchange="bindDateChange1">
+        <view class="picker">
+          {{dates1}}
+        </view>
+      </picker>
+    </view>
+    <view class='con-right' bindtap='queding'>
+      搜索
+    </view>
+  </view>
+</view>
+<view class='padding1 borderBtn'></view>
+<view class="content borderBtn  bg-fff">
+  <view wx:for="{{list}}" bindtap="lianjie" data-index="{{item.index}}" class="abb fon-30 borderTop  flex">
+    <view class="flex left">
+      <image class="images" src="{{item.headimgurl}}"></image>
+      {{item.NickName}}
+    </view>
+    <view class="classname">
+      购买总额￥{{item.YongJin}}
+    </view>
+  </view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>您暂时还没有营业额</view>

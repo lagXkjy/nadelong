@@ -1,0 +1,38 @@
+<!--Collection.wxml-->
+<view class='outer1'>
+<view class='outer-l'>
+  <view wx:for="{{list}}" class="outer bg-fff flex">
+    <view bindtap="bindCheckbox"  data-index="{{item.index}}" class="outer-left center">
+        <view  wx:if="{{item.show}}"  class="xuan"></view>
+        <image  wx:else  bindtap="bindCheckbox"  data-index="{{item.index}}" class="xuanimg" src="{{item.icon}}"></image>
+    </view>
+    <view data-id='{{item.CommodityId}}' bindtap='LianJie' class="outer-middle">
+      <image mode="widthFix" src="http://redj.1-zhao.com{{item.ListImg}}"></image>
+    </view>
+    <view data-id='{{item.CommodityId}}' bindtap='LianJie' class="outer-right" >
+      <view class="title xianzhi" bindtap="navtoCommodity" >
+        {{item.CommodityTitle}} {{item.CategoryName}}
+      </view>
+      <view class="colorred price">
+        <!-- {{item.MoneyType}} -->
+       {{item.Price}}
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+<view class="footer flex bg-fff">
+   <view class="flex">
+    <view class="outer-left center">
+      <view bindtap="bindSelectAll" wx:if="{{selectedAllStatus}}" class="xuan"></view>
+      <image bindtap="bindSelectAll" wx:else src="../../images/icon_03.png" class="xuanimg" ></image>
+  </view>
+  <view class="quanxuan">
+     {{xuanall}}
+  </view>
+   </view>
+  <view class="shoucnag fff Red-wine" bindtap="CancelConlect">
+    取消收藏
+  </view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>{{msgContent}}</view>

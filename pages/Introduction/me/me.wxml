@@ -1,0 +1,21 @@
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <view wx:for="{{arry}}" bindtap="lianjie" data-index="{{index}}" class="middle bg-fff" hidden='{{item.display}}' >
+        <view class="left">
+          <view class="img-left center">
+            <image mode="widthFix" class="img" src="{{item.img}}"></image>
+          </view>
+          <view  class="classname"> {{item.title}}</view>
+        </view>
+        <view class="sepcal center">
+     
+       <image mode="widthFix" class="ton-img" src="{{item.img2}}"></image>
+      </view>
+    </view>
+  
+  </view>
+</view>

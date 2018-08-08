@@ -1,0 +1,18 @@
+/* pages/Introduction/ceshi/ceshi.wxss */
+.item .remove{  
+    width: 60px;  
+    height: 100%;  
+    background-color: red;  
+    position: absolute;  
+    top: 0;  
+    right: -60px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+
+
+
+     display: -webkit-flex;  
+    -webkit-justify-content: center;  
+    -webkit-align-items: center;  
+}  

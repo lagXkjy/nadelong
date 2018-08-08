@@ -1,0 +1,234 @@
+/* pages/Newindex/index.wxss */
+page{
+  background-color: #fff;
+}
+.imgs{
+  width: 257rpx;
+}
+.outer-top{
+  height: 180rpx;
+  background-color: #b5000e;
+}
+.outer-mid{
+  padding: 0 20rpx;
+  justify-content:center;
+  -webkit-justify-content:center;
+  margin-top: 20rpx;
+}
+.view{
+  width: 50%;
+  position: relative;
+}
+.img-mid{
+  width: 97%;
+  height: 180rpx;
+}
+.la-view .img-mid{
+   float: right;
+}
+.XieLie{
+  text-align: center;
+  height: 41rpx;
+  line-height: 41rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  width: 97%;
+}
+.XieLie1{
+   text-align: center;
+  height: 41rpx;
+  line-height: 41rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  width: 97%;
+}
+.slide-image{
+  width: 100%;
+  height: 500rpx;
+}
+
+.video{
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.video video{
+  width: 100%;
+}
+.swiper{
+  overflow: hidden;
+}
+.top{
+  height: 110rpx;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  -webkit-justify-content:center;
+  -webkit-align-items: center;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index:999;
+
+}
+.top-all{
+  width: 94%;
+  margin:auto;
+  background-color: #c4333e;
+  height: 82rpx;
+  display: flex;
+  display:-webkit-flex;
+}
+.top-left{
+  width: 15%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+
+  display:-webkit-flex;
+  -webkit-justify-content:center;
+  -webkit-align-items: center;
+}
+.top-right{
+  width: 85%;
+  height: 100%;
+}
+.search{
+  width: 57rpx;
+}
+.zhanwei{
+  color:#fff;
+}
+  .img1{
+    width: 31rpx;
+   margin-top:20rpx;
+  }
+.swiper{
+  width: 100%;
+  margin-top: 110rpx;
+  height: 350rpx;
+}
+.swiper1{
+  width: 100%;
+  margin-top: 490rpx;
+}
+.reMai{
+  padding-left: 20rpx;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  font-size: 26rpx;
+}
+
+.padding-l-18{
+  padding-left: 18rpx;
+}
+.Height-t{
+  height: 80rpx;
+}
+.bg-outer{
+   flex-wrap:wrap;
+   justify-content: space-between;
+   -webkit-flex-wrap:wrap;
+   -webkit-justify-content: space-between;
+   padding: 0 20rpx;
+}
+.outer-content{
+   width: 343rpx;
+  margin-bottom: 20rpx;
+  border:1px solid #eee;
+}
+.img{
+  height: 346rpx;
+  width: 340rpx;
+ display: block;
+
+}
+.border-b-1{
+  border-bottom: 1px solid #eee;
+   margin-bottom: 10rpx;
+}
+.price{
+  margin-bottom: 20rpx;
+}
+.huise{
+  color:#6a6a6a;
+  margin-bottom: 5rpx;
+}
+.show view{
+  width: 94%;
+  margin:0 auto;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+    margin-bottom: 15rpx;
+    overflow: hidden;
+}
+.show{
+  padding-bottom: 25rpx;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index:999;
+}
+.show-top{
+  display: flex;
+  display: -webkit-flex;
+}
+.qingchu{
+  text-align: right;
+  padding-right: 10rpx;
+}
+.img-all{
+  width: 50rpx;
+  margin: auto;
+  display: block;
+}
+.qinhong{
+  display: flex;
+   display: -webkit-flex;
+}
+.Red-wine .kuang{
+  width: 100rpx;
+  height: 100%;
+  display:flex;
+  display: -webkit-flex; 
+  justify-content:center;
+  align-items: center;
+  -webkit-justify-content:center;
+  -webkit-align-items: center;
+}
+.jiage{
+  width: 40rpx;
+}
+.jiuzhonga{
+  width: 40rpx;
+}
+.anwushuju{
+  text-align: center;
+  color:#ababab;
+  font-size: 30rpx;
+}
+.huiseaO{
+  font-size: 35rpx;
+  color:#484848;
+margin-bottom: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  word-wrap:break-word;
+  margin-top: 10rpx;
+  overflow:hidden;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+
+
+
+
+

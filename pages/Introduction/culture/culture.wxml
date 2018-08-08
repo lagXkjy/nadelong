@@ -1,0 +1,17 @@
+<!--culture.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="borderBtn">
+<view wx:for="{{list}}" bindtap="lianjie" data-index="{{item.ActivityID}}" class=" borderTop  bg-fff flex XianZhiG outer">
+    <view class="">
+      <image  class="images" src="{{allurl}}{{item.SistImage}}"></image>
+    </view>
+    <view class="right">
+      <view class="title xianzhi fon-30">{{item.ActivityName}}</view>
+      <view class="fon-26 huise2">
+      {{item.ActivityDetails}}
+      </view>
+    </view>
+</view>
+<view class='noMore a6a6a6' hidden='{{noMore}}'>没有更多了</view>
+</view>
+

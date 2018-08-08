@@ -1,0 +1,13 @@
+<!--pages/JingXuan/index.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='outer'>
+  <view bindtap='GoToNew' data-id='{{item.SeriesID}}' wx:for="{{list}}" class='outer-big'>
+      <image class='imgs' mode='widthFix' src='{{Allurl}}{{item.Images}}'></image>
+    <view class='border'>
+      <view class='fon-30 name'>{{item.SeriesName}}</view>
+      <view class='fon-30 title'>{{item.Introduction}}</view>
+    </view>
+  </view>
+</view>
+<view  class='noMore' hidden='{{noMore}}'>没有更多了</view>
+<view  class='noMore' hidden='{{TnoMore}}'>暂无系列</view>

@@ -1,0 +1,164 @@
+/* detail.wxss */
+.address{
+  padding:40rpx 30rpx;
+   -webkit-justify-content:space-between;
+   justify-content:space-between;
+   margin-bottom: 20rpx;
+   font-size: 30rpx;
+}
+.addiree-top{
+  font-size: 30rpx;
+}
+.addiree-middle{
+  font-size: 26rpx;
+  color:#6a6a6a;
+  margin-top: 30rpx;
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+
+.address-img{
+  height: 33rpx;
+  width: 22rpx;
+}
+.jiSuan{
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+   padding:0rpx 30rpx;
+  margin-bottom: 20rpx;
+  display: none;
+}
+.guiZe{
+  color:#6a6a6a;
+}
+.guiZe-top{
+  display: block;
+  margin-right: 20rpx;
+}
+.position{
+  position: absolute;
+  right: 47rpx;
+  top:80rpx;
+  color:#6a6a6a;
+}
+.commodity-top{
+  padding:18rpx 30rpx;
+  position: relative;
+}
+.all-img{
+  width: 200rpx;
+  margin-right: 35rpx;
+}
+.title{
+  margin-bottom: 70rpx;
+  padding-right: 30rpx;
+}
+.footer-top {
+   -webkit-justify-content:space-between;
+  justify-content:space-between;
+}
+.commodity-footer{
+  padding: 10rpx 45rpx 10rpx 30rpx;
+  line-height: 50rpx;
+}
+.commodity-middle{
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  padding: 0 45rpx 0 30rpx;
+  height: 73rpx;
+  line-height: 73rpx;
+}
+.delivery{
+  padding: 0 30rpx;
+  margin-top: 20rpx;
+}
+.delivery-spel view{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.delivery .delivery-top{
+  line-height: 100rpx;
+}
+.delivery-spela{
+  margin-top: 0;
+}
+.margintop{
+  margin-top: 20rpx;
+}
+.footer-last{
+  padding: 10rpx 30rpx;
+  padding-bottom: 30rpx;
+}
+.dadiana{
+  height: 102rpx;
+  line-height: 102rpx;
+}
+.body-view{
+  height: 60rpx;
+
+}
+.invoice-top{
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+    line-height: 100rpx;
+    padding:0 30rpx;
+}
+.leixing{
+  height: 100rpx;
+  line-height: 100rpx;
+   padding:0 30rpx;
+   justify-content: space-between;
+    -webkit-justify-content:space-between;
+}
+.qiye{
+  margin-right: 20rpx;
+}
+.inputmust{
+   height: 100rpx;
+  line-height: 100rpx;
+  width: 521rpx;
+
+}
+.Paadi{
+  padding-bottom: 109rpx;
+}
+.botton-sub{
+  height: 109rpx;
+  line-height: 109rpx;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.tijiaodingdan{
+  width: 331rpx;
+  text-align: center;
+  margin:0;
+  padding:0;
+box-sizing:border-box;
+font-size:18px;
+text-decoration:none;
+line-height:109rpx;
+border-radius:0px;
+margin-left: 20rpx;
+
+}
+.ganhong{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.commodity{
+  margin-bottom: 20rpx;
+}
+.picker{
+  margin-right: 30rpx;
+}

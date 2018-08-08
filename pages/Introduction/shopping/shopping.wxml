@@ -1,0 +1,75 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view hidden="{{isshow}}" class="bi-outer">
+<!-- <view bindtap='rule' class="jiSuan borderTop borderBtn bg-fff flex">
+    <view class="jiSUan-top">
+    进口计算公式
+    </view>
+     <view class="center guiZe">
+     <text class="guiZe-top">计算规则</text> 
+    <image class=" address-img"  src="../../../images/left-to_03.png"></image>
+    </view>
+</view> -->
+
+<view class="footer flex bg-fff">
+   <view bindtap="bindSelectAll" class="flex">
+    <view class="outer-left center">
+      <view  wx:if="{{selectedAllStatus}}" class="xuan"></view>
+      <image  wx:else src="../../../images/icon_03.png" class="xuanimg" ></image>
+  </view>
+  <view class="quanxuan">
+      {{xuanall}}
+  </view>
+  <view class="quanxuan quanxuana">
+      合计:¥{{ZongJi}}
+  </view>
+   </view>
+  <view bindtap="lianjie" class="shoucnag fff Red-wine">
+    去结算({{tale}})
+  </view>
+</view>
+<view  class="bg-fff AREo big" wx:if="{{item.IsShow}}" wx:for="{{list}}"  data-index="{{item.index}}"  bindtouchstart="drawStart" bindtouchmove="drawMove"  bindtouchend="drawEnd" style="right:{{item.right}}rpx"  >
+<view  class="outer flex">
+  <view bindtap="bindCheckbox"  data-index="{{item.index}}" class="outer-left center">
+      <view  wx:if="{{item.show}}"   data-index="{{item.index}}" class="xuan"></view>
+      <image  wx:else   data-index="{{item.index}}" class="xuanimg" src="../{{item.icon}}"></image>
+  </view>
+  <view data-index="{{item.index}}" bindtap='GoXiangQi' class="outer-middle center">
+    <image mode="widthFix" src="{{Allurl}}{{item.ListImg}}"></image>
+  </view>
+  <view class="outer-right">
+    <view data-index="{{item.index}}" bindtap='GoXiangQi' class="title xianzhi">
+      {{item.CommodityTitle}}
+    </view>
+    <view class="colorred flex price">
+      <view class="pricea">¥{{item.Price}}
+          
+      </view> 
+      <view class="flex waijia">
+        <text data-index="{{index}}" bindtap="bindMinus" class="suanshu suanshu1">-</text>
+        <input value="{{item.Quantity}}" disabled="{{true}}" data-index="{{index}}" bindchange="bindManual"  type="number"  class="suanshu fon-24"/>
+        <text data-index="{{index}}"  bindtap="bindPlus" class="suanshu suanshu2">+</text>
+      </view>
+     
+    </view>
+     <!-- <view class='YuanJiaA'>¥原价{{item.HighPraise}}</view> -->
+  </view>
+</view>
+  <view class="xiaoji fon-26 borderBtn">
+    外币小计：€{{item.Sum}}
+  </view>
+  <view class="remove">
+    <view data-index="{{item.index}}" class='SHouCang' bindtap="SHouCang">收藏</view>
+    <view data-index="{{item.index}}" bindtap="delItem">删除</view>
+  </view> 
+</view>
+  
+<view class='noMore' hidden='{{noMore}}'>没有更多了</view>
+</view>
+<view hidden="{{!isshow}}">
+  <view class="outer1">
+    <image class="img" mode="widthFix" src="../../../images/gouwchek_03.png"></image>
+    <view class="fon-30">
+      批发车是空的，<text  class="guang">我要逛逛</text>
+  </view>
+  </view>
+</view>

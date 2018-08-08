@@ -1,0 +1,50 @@
+<!--Winery.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="outer">
+<view class="buton fon-26 flex">
+  <view class="button-one  fff">酒庄</view>
+  <view bindtap="Alcohol" class="button-two bg-fff">酒品</view>
+</view>
+ <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}">
+  <block  wx:for="{{list}}" >
+    <swiper-item>
+      <image src="{{allurl}}{{item.Images}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+ 
+</view>
+<view class="wenti">{{arry.ChateauName}}</view>
+    <view class="country fon-30 borderBtn">{{arry.CountryName}}</view>
+
+<view class="middle">
+
+  <view class="fon-30 jieshao">
+    酒庄介绍
+  </view>
+  
+   <view class="outer-top ">
+    <video poster="{{allurl}}{{arry.Images}}" src="{{allurl}}{{arry.video}}" ></video>
+  </view>
+  <view class="fon-26 {{moree}} middle-last">
+  {{arry.Introduction}}
+  </view>
+ 
+<view bindtap="genduo" class="fon-30 borderBtn more">
+  <view wx:if="{{moreDuo}}">阅读更多</view> 
+  <view wx:else>收起更多</view> 
+</view>
+
+ <view class="fon-30 jieshao">
+    庄主介绍
+  </view>
+    <view class="fon-26 {{moree1}} middle-last">
+  {{arry.ownerDes}}
+  </view>
+
+  <view bindtap="genduo1" class="fon-30 borderBtn more">
+  <view wx:if="{{moreDuo1}}">阅读更多</view> 
+  <view wx:else>收起更多</view> 
+</view>
+
+</view>

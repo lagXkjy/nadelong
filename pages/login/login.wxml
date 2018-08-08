@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view class='font-30'>
+  <view class='flex center ad'><image class='wid90' src='/images/nadelong.png' mode='widthFix'></image></view>
+  <input 
+  class='flex wid100 bor-t-1 inp-100'
+  bindinput='inpAccount'
+  placeholder='请输入分销商账号'></input>
+  <input 
+  class='flex wid100 bor-t-1 inp-100'
+  bindinput='inpPwd'
+  password
+  placeholder='请输入密码'></input>
+  <button
+  open-type='getUserInfo'
+  bindgetuserinfo='getUserInfo'
+  class='btn-login mar-t-60 font-36'
+  >登录</button>
+</view>

@@ -1,0 +1,83 @@
+/* Winery.wxss */
+page{
+  background-color: #fff;
+}
+.outer-top video{
+  height: 376rpx;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.outer{
+  position: relative
+}
+.buton{
+  justify-content:center;
+  -webkit-justify-content:center;
+  height: 57rpx;
+  line-height: 57rpx;
+  position: absolute;
+  z-index: 20;
+  left: 252rpx;
+  top:20rpx;
+}
+.button-one{
+  background-color: #7d0005;
+  width: 121rpx;
+  border-radius: 30rpx 0 0 30rpx;
+  text-align: center;
+}
+.button-two{
+  width: 121rpx;
+  border-radius:0 30rpx 30rpx  0; 
+  text-align: center;
+  box-sizing: border-box;
+  border:1px solid #7d0005;
+  color:#7d0005;
+}
+.wenti{
+  font-size: 38rpx;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+}
+.country{
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  padding-bottom: 20rpx;
+  color:#767676;
+}
+.swiper{
+  margin-bottom: 30rpx;
+}
+.swiper image{
+  width: 100%;
+  height: 375rpx;
+}
+.jieshao{
+  padding: 25rpx 30rpx 25rpx 30rpx;
+  color:#000000;
+}
+.middle-last{
+  margin:0rpx 30rpx 30rpx 30rpx;
+  color:#767676;
+  margin-top:20rpx;
+}
+.more{
+  color:#7d0005;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+  padding-bottom: 40rpx;
+}
+.moree{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:3;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  margin-top:20rpx;
+}
+.moree1{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:3;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  margin-top:20rpx;
+}

@@ -1,0 +1,49 @@
+/* culture.wxss */
+page{
+  padding-top:20rpx;
+}
+.outer{
+  padding: 20rpx 30rpx;
+}
+.images{
+  width: 300rpx;
+  margin-right: 27rpx;
+  height: 200rpx;
+}
+.title{
+  line-height: 40rpx;
+}
+.huise{
+  color:#8e8e8e;
+  margin-top: 22rpx;
+  word-wrap:break-word;
+   -webkit-word-wrap:break-word;
+  overflow:hidden;
+  -webkit-overflow:hidden;
+  -webkit-line-clamp:3;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.huise2{
+  color:#8e8e8e;
+  margin-top: 22rpx;
+  word-wrap:break-word;
+   -webkit-word-wrap:break-word;
+  overflow:hidden;
+  -webkit-overflow:hidden;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.right{
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.scroll{
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+}

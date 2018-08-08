@@ -1,0 +1,37 @@
+<!--Evaluation.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view wx:for-item="j" wx:for="{{List}}">
+    <view class="outer bg-fff ">
+      <view class="outer-top flex">
+        <view class="left">
+          <image mode="widthFix" src="{{Allurl}}{{j.CommodityCover}}"></image>
+        </view>
+        <view class="right">
+          <view class="title">{{j.CommodityName}}</view>
+          <view class="xing">
+            <block wx:for="{{j.stars}}">
+              <image class="star-image" style="left: {{item*60}}rpx" src="{{j.key > item ?(j.key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+                <view data-id='{{j.index}}' class="item" data-key="{{item+1}}" bindtap="selectRight"></view>
+
+              </image>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="borderTop">
+        <textarea bindinput='BiaoDan' data-index="{{index}}" name="textarea{{index}}" maxlength="-1" placeholder-class="zhanwei" placeholder="说点什么" />
+      </view>
+      <!--  -->
+    </view>
+    <view class="flex">
+      <image mode="widthFix" class="img" wx:for="{{j.list}}" src="{{item.ImgPath}}"></image>
+    </view>
+    <view data-id='{{j.index}}' bindtap="chooseimg" class="footer-img">
+      <image mode="widthFix" src="../../../images/xiangji_11.png"></image>
+    </view>
+  </view>
+
+  <button formType="submit" class="last fff Red-wine">
+    提交
+  </button>
+</form>

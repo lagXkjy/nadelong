@@ -1,0 +1,41 @@
+<!--Alcohol.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="buton fon-26 flex">
+  <view bindtap='Winery' class="button-one bg-fff ">酒庄</view>
+  <view bindtap="Alcohol" class="button-two  fff ">酒品</view>
+</view>
+
+
+<view wx:for="{{list}}" class="outer">
+  <view data-id='{{index}}' bindtap='LinkTo' class="outer-content flex">
+    <view class="center">
+      <image class="img" mode='widthFix' src="{{Allurl}}{{item.ListImg}}"></image>
+    </view>
+      <view class="classname">
+        <view class="fon-30 xianzhi">
+          {{item.CommodityTitle}}
+        </view>
+        <view class="font-36 price colorred">
+          ¥{{item.Price}}
+          <!-- <text class='YuanJiaA'>原价￥{{item.HighPraise}}</text> -->
+        </view>
+         <view class="fon-24 huise">
+         酒精度：{{item.WineScale}}%
+        </view>
+         <view class="fon-24 huise">
+         年份：{{item.Year}}
+        </view>
+         <view class="fon-24 huise">
+         产区：{{item.CountryName}}
+        </view>
+         <view class="fon-24 huise">
+         葡萄酒种：{{item.grapeName}}
+        </view>
+          <view class="fon-24 huise">
+        月销量：{{item.Sort}}
+        </view>
+      </view>
+  </view>
+</view>
+<view class='noMore' hidden='{{noMore}}'>没有更多了</view>
+<view class='noMore' hidden='{{noMore1}}'>暂时还没有数据</view>

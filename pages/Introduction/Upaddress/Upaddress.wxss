@@ -1,0 +1,38 @@
+/* newaddress.wxss */
+.outer{
+  font-size: 30rpx;
+  padding: 0rpx 30rpx;
+  height: 100rpx;
+  border-bottom:1px solid #e3e3e3;
+    justify-content:space-between;
+    align-items: center;
+  
+   -webkit-justify-content:space-between;
+    -webkit-align-items: center;
+}
+.Seal{
+  height: 100rpx;
+}
+.outer-left{
+  display: flex;
+  align-items: center;
+   display: -webkit-flex;
+ -webkit-align-items: center;
+}
+.picker {
+  height:100rpx;
+}
+.sanGeI{
+  flex:1;
+  -webkit-flex:1
+}
+
+button{
+  margin: 30rpx auto;
+
+  width: 95%;
+}
+.img{
+  width: 22rpx;
+  height: 33rpx;
+}

@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/empty/empty",
+    "pages/login/login",
+    "pages/Newindex/index",
+    "pages/yye/yye",
+    "pages/yyeDetail/yyeDetail",
+    "pages/EWei/EWei",
+    "pages/JingXuan/index",
+    "pages/index/index",
+    "pages/commodity/commodity",
+    "pages/Introduction/WuLiu/WuLiu",
+    "pages/rule/rule",
+    "pages/detail/detail",
+    "pages/heritage/heritage",
+    "pages/Collection/Collection",
+    "pages/Alcohol/Alcohol",
+    "pages/AlcoholT/Alcohol",
+    "pages/kong/kong",
+    "pages/Confirmation/Confirmation",
+    "pages/Introduction/shopping/shopping",
+    "pages/Introduction/culture/culture",
+    "pages/Winery/Winery",
+    "pages/teamshare/teamshare",
+    "pages/Dealer/Dealer",
+    "pages/Team/Team",
+    "pages/share/share",
+    "pages/Introduction/newaddress/newaddress",
+    "pages/Introduction/address/address",
+    "pages/Introduction/Evaluation/Evaluation",
+
+    "pages/Introduction/Order/Order",
+    "pages/Introduction/me/me",
+    "pages/logs/logs",
+    "pages/Introduction/Upaddress/Upaddress",
+    "pages/Introduction/ceshi/ceshi",
+    "pages/WineryTw/Winery"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b5000e",
+    "navigationBarTitleText": "纳德隆",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#99999b",
+    "selectedColor": "#9a5559",
+    "backgroundColor": "#f7f7fa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/Newindex/index",
+        "text": "首页",
+        "iconPath": "images/jiubei_07.png",
+        "selectedIconPath": "images/index_03.png"
+      },
+      {
+        "pagePath": "pages/Introduction/culture/culture",
+        "text": "关于纳德隆",
+        "iconPath": "images/wenhua_06.png",
+        "selectedIconPath": "images/hongjiuwenhua_03.png"
+      },
+      {
+        "pagePath": "pages/Introduction/shopping/shopping",
+        "text": "批发车",
+        "iconPath": "images/shopping_08.png",
+        "selectedIconPath": "images/hoseche_03.png"
+      },
+      {
+        "pagePath": "pages/Introduction/me/me",
+        "text": "我",
+        "iconPath": "images/me_05.png",
+        "selectedIconPath": "images/megong_17.png"
+      }
+    ]
+  }
+}

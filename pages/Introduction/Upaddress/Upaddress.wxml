@@ -1,0 +1,48 @@
+<!--newaddress.wxml-->
+<form  bindsubmit="formSubmit">
+  <view class="outer bg-fff flex">
+    <view class="outer-left sanGe">
+      收货人：
+    </view>
+    <input name="name" value='{{Consignee}}' bindinput='ConsigneeInput' class="sanGeI"  />
+  </view>
+
+   <view class="outer bg-fff flex">
+    <view class="outer-left sanGe">
+      手机号：
+    </view>
+    <input name="phone" value='{{Mobile}}' bindinput='MobilleInput' type="number" class="sanGeI"  />
+  </view>
+
+
+
+
+
+
+      <view class="outer bg-fff flex">
+
+      <picker class='picker' mode="region" bindchange="bindTimeChange">
+            <view class='flex Seal'>
+                  <view class="outer-left "> 
+                  所在地区：{{DetailedAddress}}
+                  </view>
+            </view>
+      </picker>
+ <image class="img" mode="wdithFix" src="../../../images/left-to_03.png"></image>
+      </view>    
+
+
+
+
+
+
+
+
+   <view class="outer bg-fff flex">
+    <view class="outer-left siGe">
+      详细地址：
+    </view>
+    <input name="address" value='{{FullAddress}}' bindinput='FullAddressInput' class="sanGeI"  />
+  </view>
+</form>
+<button form-type='submit' bindtap='saveMsg' class="fff Red-wine">保存</button>

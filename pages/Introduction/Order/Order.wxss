@@ -1,0 +1,118 @@
+page{  
+  display: flex;  
+  display: -webkit-flex;  
+  flex-direction: column;  
+   -webkit-flex-direction: column; 
+  height: 100%;  
+  font-size: 30rpx;
+}  
+.navbar{  
+  flex: none;  
+  display: flex;  
+
+  -webkit-flex: none;  
+  display: -webkit-flex;  
+  background: #fff; 
+}  
+.speals{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .item{  
+  position: relative;  
+  flex: auto;
+   -webkit-flex: auto; 
+  text-align: center;  
+  line-height: 100rpx;  
+}  
+.navbar .item.active{  
+  color: #990000;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 4rpx;  
+  background: #990000;  
+}
+
+.middle-left image{
+  width: 202rpx;
+  margin-right: 40rpx;
+}
+.outeraa .outer:first-child{
+  margin-top: 120rpx;
+}
+.outer{
+  margin-top:20rpx;
+
+}
+.num{
+  position: absolute;
+  right: 30rpx;
+  top:130rpx;
+}
+.outer-top{
+  height: 72rpx;
+  line-height: 72rpx;
+  background-color: #f9f9f9;
+  font-size: 26rpx;
+  text-indent: 30rpx;
+}
+.middle{
+   padding:20rpx 30rpx ;
+   font-size: 30rpx;
+   position: relative;
+}
+.middle-right-title{
+  padding-right: 40rpx;
+  line-height: 40rpx;
+  height: 100rpx;
+}
+.price{
+  font-size: 36rpx;
+}
+.footer-top{
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: right;
+  padding-right: 30rpx;
+}
+.footer-bottom{
+  height: 80rpx;
+   display:flex;
+  justify-content:flex-end;
+  align-items: center;
+
+   display:-webkit-flex;
+  -webkit-justify-content:flex-end;
+  -webkit-align-items: center;
+  padding-right: 30rpx;
+}
+.zhifuqu{
+  width: 141rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+.scroll{
+  position: fixed;
+  left: 0;
+  top: 100rpx;
+  bottom:0;
+  right: 0;
+}
+.noMore{
+  margin-bottom:0rpx;
+}
+.speAA{
+  margin-top: 150rpx;
+ 
+}

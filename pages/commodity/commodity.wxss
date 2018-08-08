@@ -1,0 +1,180 @@
+/* commodity.wxss */
+page{
+  background-color: #fff;
+}
+.img-top{
+  width: 100%;
+  margin-bottom: 45rpx;
+  border-bottom:1px solid #e3e3e3;
+}
+.outer{
+  padding: 0 30rpx;
+  padding-bottom: 100rpx;
+}
+.price{
+  margin-top: 15rpx;
+  padding-bottom: 15rpx;
+ font-size:50rpx;
+}
+.detail{
+  color: #484848;
+  margin-top: 45rpx;
+}
+.detail view{
+  line-height: 50rpx;
+}
+.detail-img{
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+}
+.all-top{
+  height: 95rpx;
+  line-height: 95rpx;
+}
+.all-img{
+  width: 100%;
+  margin-bottom: 50rpx;
+}
+.userinfo-avatar{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.pinglun{
+  margin:40rpx 0 0 0;
+}
+.pinglunL{
+  padding-bottom: 40rpx;
+  font-size:30rpx;
+}
+.name-p{
+  margin: 10rpx 0; 
+}
+.pi-p{
+  margin: 21rpx 0 0rpx 0; 
+
+}
+.soa-p{
+  margin-top: 35rpx;
+}
+.app-pi{
+  color: #7d0005;
+  margin:38rpx 0;
+ font-size: 30rpx;
+}
+.l-img{
+  width: 40rpx;
+}
+.one-l{
+  box-sizing: border-box;
+  width: 13.33%;
+  text-align: center;
+  border-right: 1px solid #e3e3e3;
+}
+.l-lst .one-l:nth-child(3){
+  border-right:0;
+}
+.l-lst{
+  height: 100rpx;
+  align-items: center;
+   -webkit-align-items: center;
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width: 100%;
+
+  background-color: white;
+}
+.one-q{
+  width: 30%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+}
+.one-q-hui{
+  background-color: #aaaaaa;
+}
+.diwei{
+  position: relative;
+}
+.yuan{
+  height: 30rpx;
+  width: 30rpx;
+  background-color: #7d0005;
+  line-height: 30rpx;
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  left: 50rpx;
+  top:0rpx;
+}
+.swiper{
+ height: 750rpx;
+  width: 100%;
+   margin-bottom: 20rpx;
+}
+.slide-image{
+  height: 750rpx;
+  width: 100%;
+ 
+}
+.Show{
+  display: none;
+}
+.spealB{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:1;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.imgAll{
+  display: flex;
+  text-align: center;
+  flex-direction:row ;
+  flex-wrap:wrap;
+
+  display: -webkit-flex;
+  -webkit-text-align: center;
+  -webkit-flex-direction:row ;
+  -webkit-flex-wrap:wrap;
+  padding-bottom: 20rpx;
+}
+.imgAll image{
+  width: 24%;
+  margin-top: 20rpx;
+  margin-right: 1%;
+}
+.all-view view{
+  font-size: 34rpx;
+}
+.GouMaiShu{
+  height: 90rpx;
+  justify-content: space-between;
+  -webkit-justify-content:space-between;
+  align-items: center;
+  -webkit-align-items:center;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 35rpx;
+}
+.ShuBtn{
+  -webkit-justify-content:center;
+  justify-content: center;
+  align-items: center;
+   -webkit-align-items:center;
+}
+.ShuBtn view{
+  height: 40rpx;
+  width: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #f2f2f2;
+  font-size: 35rpx;
+}
+.ShuBtn view:nth-child(2){
+  background-color: #fff;
+  min-width: 50rpx;
+  color: #484848;
+}

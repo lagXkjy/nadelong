@@ -1,0 +1,32 @@
+/* pages/JingXuan/index.wxss */
+page{
+    background-color: #fff;
+}
+.noMore{
+  margin-bottom: 20rpx;
+}
+page{
+  background-color: #fff;
+}
+.imgs{
+  width: 100%;
+  display: block;
+}
+.outer{
+  padding: 10rpx 25rpx;
+}
+.outer-big{
+  margin-bottom: 20rpx;
+}
+.border{
+border: 1px solid #e3e3e3;
+box-sizing: border-box;
+border-top: 0;
+padding-left: 20rpx;
+}
+.name{
+  padding: 15rpx 0;
+}
+.title{
+  padding-bottom: 20rpx;
+}

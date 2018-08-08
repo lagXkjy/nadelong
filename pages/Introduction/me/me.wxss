@@ -1,0 +1,58 @@
+/* me.wxss */
+page{
+background-color: #f0f2f5;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+   display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  height:299rpx;
+  background-color: #fff;
+  width: 100%;
+  padding-top: 50rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.userinfo-avatar {
+  width: 152rpx;
+  height: 152rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+.usermotto{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.middle{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 30rpx;
+   -webkit-justify-content:space-between;
+  justify-content:space-between;
+  border-top:1px solid #ccc;
+}
+.usermotto .middle:last-child{
+  border-bottom:1px solid #ccc;
+}
+.left{
+    display: -webkit-flex;
+    display: flex;
+    width: 50%;
+}
+.img-left{
+  width: 100rpx;
+}
+.img{
+  width: 39rpx;
+}
+.ton-img{
+  width: 20rpx;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,100 @@
+<!--pages/Newindex/index.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<!--  -->
+<view hidden="{{specal}}" class="top Red-wine fff">
+  <view class="top-all">
+    <view bindtap='SearchMoHu' class="top-left">
+      <image mode="widthFix" class="search" src="../../images/search_03.png"></image>
+    </view>
+    <input bindtap='focus' value="" bindfocus="QingKong"  placeholder="搜索酒庄" placeholder-class="zhanwei"  class="top-right" />
+  </view>
+</view> 
+<view hidden="{{speacla}}" class="show Red-wine fff">
+  <view class="show-top">
+   <view bindtap="xiaoshi" class="kuang">
+    <image mode="widthFix"  class="img1" src="../../images/top_03.png"></image>
+    </view>
+    <view bindtap='clearall' class="qingchu">清除全部</view>
+  </view>
+  <view bindtap='guoBie' class="qinhong">
+  <view class="kuang">
+    <image mode="widthFix" class="img-all" src="../../images/guo_07.png"></image>
+    </view>
+     <view><picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      国别  {{array[index]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+    <view class="kuang">
+    <image mode="widthFix" class="img-all jiuzhonga" src="../../images/jiuzhong_11.png"></image>
+     </view>
+     <view><picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+    <view class="picker">
+      酒种  {{array1[index1]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+   <view class="kuang">
+    <image  mode="widthFix" class="img-all jiage" src="../../images/qian_14.png"></image>
+     </view>
+     <view><picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+    <view class="picker">
+      价格  {{array2[index2]}}
+    </view>
+  </picker></view>
+  </view>
+   <view class="qinhong">
+   <view class="kuang">
+    <image mode="widthFix" class="img-all" src="../../images/zuanshi_17.png"></image>
+    </view>
+     <view><picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+    <view class="picker">
+      品牌  {{array3[index3]}}
+    </view>
+  </picker></view>
+  </view>
+</view>
+
+<!--  -->
+<view class='LunBoTu'>
+  <swiper  indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}"   class="{{swiper}}"  autoplay="{{true}}">
+  <block wx:for="{{arry.banner}}">
+    <swiper-item>
+      <image  src="{{Allurl}}{{item.LogoPicturePath}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view  class='flex outer-mid'>
+  <view data-id='{{arry.video.ID}}' bindtap='JiuZhuang' class='view'>
+      <image  class='img-mid'  src='{{Allurl}}{{arry.video.SeriesFile}}'></image>
+      <view class=' XieLie fff fon-24'>酒庄系列</view>
+  </view>
+ <view bindtap='JingXun' data-id='{{arry.video.ID}}'  class='view la-view'>
+      <image class='img-mid' src='{{Allurl}}{{arry.video.SeriesFile2}}'></image>
+       <view class='  XieLie1 fff fon-24'>精选系列</view>
+  </view>
+
+</view>
+  <view class='fon-24  reMai'>本周热批</view>
+<view class='flex bg-outer'>
+<view wx:for="{{listL}}">
+  <view data-id='{{item.CommodityId}}' bindtap='LinkTo' class="outer-content">
+    <view class="border-b-1">
+      <image class="img"  src="{{Allurl}}{{item.ListImg}}"></image>
+    </view>
+      <view class="padding-l-18">
+        <view class="fon-30 Height-t xianzhi">
+          {{item.CommodityTitle}}
+        </view>
+        <view class="font-36 price colorred">
+          ¥{{item.Price}}<text class='YuanJiaA'></text>
+        </view>
+      </view>
+  </view>
+</view>
+</view>
+

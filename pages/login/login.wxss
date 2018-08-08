@@ -1,0 +1,37 @@
+/* pages/login/login.wxss */
+.block{
+  display: block;
+}
+.wid100{
+  width:100%;
+}
+.bor-t-1{
+  border-bottom: 1px solid #e0e0e0;
+}
+.btn-login{
+  width: 690rpx;
+  margin: 60rpx auto 0;
+  background: #990000;
+  color: #fff;
+  font-size:36rpx;
+}
+.inp-100{
+  box-sizing: border-box;
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+  width: 100%;
+  background: #fff;
+}
+.ad{
+  height: 155rpx;
+  border-bottom: 1px solid #e0e0e0;
+  font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 42rpx;
+  color: #990000;
+  font-weight: bold;
+}
+.wid90{
+  width: 80%;
+}

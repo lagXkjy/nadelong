@@ -1,0 +1,13 @@
+/* kong.wxss */
+.img{
+  width: 176rpx;
+  margin-top: 293rpx;
+  margin-bottom: 55rpx;
+}
+.outer{
+  text-align: center;
+  color:#989898;
+}
+.guang{
+  color:#4f4f4f;
+}

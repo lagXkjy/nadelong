@@ -1,0 +1,149 @@
+<!--detail.wxml-->
+<view class="address flex bg-fff">
+  <view class="address-left">
+    <view class="addiree-top">
+      {{list.Consignee}}   {{list.ConsigneeMobile}}
+    </view>
+    <view class="addiree-middle">
+     {{list.ConsigneeAddress}} 
+    </view>
+  </view>
+  <view class="center">
+    <image class=" address-img"  src="../../images/left-to_03.png"></image>
+    </view>
+</view>
+
+ <!-- <view class="jiSuan borderTop borderBtn bg-fff flex">
+    <view class="jiSUan-top">
+    进口计算公式
+    </view>
+     <view class="center guiZe">
+     <text class="guiZe-top">计算规则</text> 
+    <image class=" address-img"  src="../../images/left-to_03.png"></image>
+    </view> 
+</view> -->
+
+<view wx:for="{{LIST}}" data-id='{{index}}' bindtap='shangPin' class="commodity borderTop bg-fff ">
+ 
+  <view class="commodity-top   flex">
+   <view class="position fon-26 ababab">x{{item.Sum}}</view>
+    <view class="commodity-img center">
+      <image mode="widthFix" class="all-img" src="{{Allurl}}{{item.ListImg}}"></image>
+    </view>
+    <view class="commodity-title">
+      <view class="fon-30 title xianzhi">
+        {{item.CommodityTitle}}
+      </view>
+      <view class="colorred fon-36">
+        ¥{{item.Price}} 
+        <!-- <text class='YuanJiaA'>原价¥{{item.HighPraise}}</text> -->
+      </view>
+    </view>
+  </view>
+  <view class="commodity-middle fon-30 flex borderTop">
+    <view class="classname">
+      小计
+    </view>
+    <view class="classname">
+      ¥{{item.TPrice}}
+    </view>
+  </view>
+  <!-- <view class="commodity-footer borderBtn a6a6a6 fon-30  borderTop">
+    <view class="flex footer-top ">
+      <view class="classname">
+       汇率
+      </view>
+      <view class="classname">
+       {{item.ExChange}}
+      </view>
+    </view>
+     <view class="flex footer-top ">
+      <view class="classname">
+      海关关税{{item.HaiguanShuiPercent}}%
+      </view>
+      <view class="classname">
+    ¥{{item.HaiguanShui}}
+      </view>
+    </view>
+     <view class="flex footer-top ">
+      <view class="classname">
+      进口消费税{{item.EntercePercent}}%
+      </view>
+      <view class="classname">
+       ¥{{item.Enterce}}
+      </view>
+    </view>
+     <view class="flex footer-top ">
+      <view class="classname">
+       进口增值税{{item.AddedValuePercent}}%
+      </view>
+      <view class="classname">
+      ¥{{item.AddedValue}}
+      </view>
+    </view>
+  </view> -->
+</view>
+
+
+  <view class="delivery bg-fff borderTop fon-26">
+  <view class="delivery-spel">
+    <view class="delivery-top">
+      订单编号：{{list.OrderNo}}
+    </view>
+    <view class="">
+      下单时间：{{CreateTime}}
+    </view>
+  </view>
+  </view>
+<view wx:if="{{ISSHW}}">
+  <view class="delivery delivery-spela  borderBtn bg-fff borderTop fon-26">
+  <view class="delivery-spel">
+    <view class="delivery-top">
+      配送方式：  {{DINGDan.name}}
+    </view>
+    <view class="">
+      配送时间： {{TIme}}
+    </view>
+  </view>
+  </view>
+</view>
+<view class='WuLIXin bg-fff fon-30' wx:else>
+      暂无物流信息
+</view>
+ <view class="commodity-footer margintop   bg-fff  fon-26  borderTop">
+ <view class="flex footer-top ">
+       <!-- <view class="classname">
+      服务费{{list.FuwuPercent}}%
+      </view>
+      <view class="classname">
+       ¥{{list.FuwuPrice}}
+      </view> -->
+    </view> 
+    <view class="flex footer-top ">
+      <view class="classname">
+      国内快递费
+      </view>
+      <view class="classname">
+       ¥{{TKuaidiPrice}}
+      </view>
+    </view>
+   </view>
+
+    <view class="commodity-middle dadiana bg-fff fon-30 flex borderTop">
+    <view class="classname">
+      合计
+    </view>
+    <view class="classname">
+      实付款：¥{{Allprice}}
+    </view>
+  </view>
+
+  <!-- <view class="margintop footer-last d9d9d9">
+    <view class="fon-24">
+      温馨提示：合人民币单价
+    </view>
+   <view wx:for="{{LIST}}" class="fon-24 ganhong flex">
+      <view class="classname">{{index+1}} {{item.CommodityTitle}} </view>
+      <view class="classname">¥{{item.TPrice}}</view>
+    </view>
+  </view> -->
